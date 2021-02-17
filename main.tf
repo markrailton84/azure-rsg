@@ -1,16 +1,12 @@
 #silly change
-variable "resource_group_name" {
-   type = string
-   description = "Name of Resource Group"
-   }
-
 variable "location" {
   type        = string
   description = "Location of Resource Group"
+  default = "UK South"
   }
 
 resource "azurerm_resource_group" "resource_group" {
- name = var.resource_group_name
+ name = "randomstringrsg"
  location = var.location
 }
 
